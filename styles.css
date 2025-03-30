@@ -66,9 +66,9 @@ h1 {
 }
 
 .avatar {
-    width: 40px;
-    height: 40px;
-    margin-right: 12px;
+    width: 120px;  /* Zmieniono rozmiar logo giełdy na 120px */
+    height: 120px; /* Zmieniono rozmiar logo giełdy na 120px */
+    margin-right: 20px;
     border-radius: 50%;
     object-fit: cover;
 }
