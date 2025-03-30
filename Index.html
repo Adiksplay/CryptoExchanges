@@ -6,63 +6,100 @@
     <title>Cryptocurrency Exchange Comparison</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            margin: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
         }
         h1 {
             text-align: center;
-            color: #343a40;
+            color: #333;
+            padding: 40px 0;
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         th, td {
-            border: 1px solid #dee2e6;
-            padding: 15px;
+            padding: 20px;
             text-align: left;
+            font-size: 16px;
+            border-bottom: 1px solid #ddd;
         }
         th {
             background-color: #007bff;
             color: #fff;
+            font-weight: bold;
         }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        td {
+            color: #555;
         }
         ul {
             margin: 0;
             padding-left: 20px;
+            list-style: disc;
         }
         .button {
             display: inline-block;
-            padding: 10px 20px;
-            margin: 10px 0;
-            font-size: 16px;
+            padding: 12px 24px;
+            font-size: 18px;
             color: #fff;
             background-color: #28a745;
+            border-radius: 5px;
             text-align: center;
             text-decoration: none;
-            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
         .button:hover {
             background-color: #218838;
         }
-        .center {
-            text-align: center;
-        }
         .avatar {
-            width: 50px;
-            height: 50px;
-            margin-right: 15px;
-            vertical-align: middle;
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+            border-radius: 50%;
+            object-fit: cover;
         }
         .exchange-info {
             display: flex;
             align-items: center;
+        }
+        .card {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-header h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .card-body {
+            margin-top: 20px;
+        }
+        .card-footer {
+            margin-top: 20px;
+            text-align: center;
         }
     </style>
 </head>
@@ -70,72 +107,82 @@
 
     <h1>Cryptocurrency Exchange Comparison</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Exchange</th>
-                <th>Advantages</th>
-                <th>Disadvantages</th>
-                <th>Affiliate Link</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <div class="exchange-info">
-                        <img src="https://example.com/binance-logo.png" alt="Binance Logo" class="avatar">
-                        Binance
-                    </div>
-                </td>
-                <td>
-                    <ul>
-                        <li>Huge liquidity and low transaction fees (0.1%).</li>
-                        <li>Support for deposits in PLN via credit card, bank transfer, and digital wallets.</li>
-                        <li>Innovative products like Launchpad, giving access to new cryptocurrency projects.</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Requires KYC verification, which may be a barrier for those valuing anonymity.</li>
-                        <li>There may be restrictions due to regulations in different countries.</li>
-                    </ul>
-                </td>
-                <td class="center">
-                    <a href="YOUR_BINANCE_AFFILIATE_LINK" class="button" target="_blank">Sign up on Binance</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="exchange-info">
-                        <img src="https://example.com/bitget-logo.png" alt="Bitget Logo" class="avatar">
-                        Bitget
-                    </div>
-                </td>
-                <td>
-                    <ul>
-                        <li>Attractive transaction fees and a wide selection of cryptocurrencies.</li>
-                        <li>Innovative features like copy trading, which are rarely found on other platforms.</li>
-                        <li>Intuitive interface and support for multiple languages, including Polish.</li>
-                    </ul>
-                </td>
-                <td>
-                    <ul>
-                        <li>Lower trading volume compared to Binance.</li>
-                        <li>Limited PLN deposit options.</li>
-                    </ul>
-                </td>
-                <td class="center">
-                    <a href="YOUR_BITGET_AFFILIATE_LINK" class="button" target="_blank">Sign up on Bitget</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="exchange-info">
-                        <img src="https://example.com/mexc-logo.png" alt="MEXC Logo" class="avatar">
-                        MEXC
-                    </div>
-                </td>
-                <td>
-                    <ul>
-                        <li>No identity verification required.</li>
-                        <li>Low trading fees and support for less popular tokens.</
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="exchange-info">
+                    <img src="https://example.com/binance-logo.png" alt="Binance Logo" class="avatar">
+                    <h2>Binance</h2>
+                </div>
+            </div>
+            <div class="card-body">
+                <strong>Advantages:</strong>
+                <ul>
+                    <li>Huge liquidity and low transaction fees (0.1%).</li>
+                    <li>Support for deposits in PLN via credit card, bank transfer, and digital wallets.</li>
+                    <li>Innovative products like Launchpad, giving access to new cryptocurrency projects.</li>
+                </ul>
+                <strong>Disadvantages:</strong>
+                <ul>
+                    <li>Requires KYC verification, which may be a barrier for those valuing anonymity.</li>
+                    <li>There may be restrictions due to regulations in different countries.</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <a href="YOUR_BINANCE_AFFILIATE_LINK" class="button" target="_blank">Sign up on Binance</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="exchange-info">
+                    <img src="https://example.com/bitget-logo.png" alt="Bitget Logo" class="avatar">
+                    <h2>Bitget</h2>
+                </div>
+            </div>
+            <div class="card-body">
+                <strong>Advantages:</strong>
+                <ul>
+                    <li>Attractive transaction fees and a wide selection of cryptocurrencies.</li>
+                    <li>Innovative features like copy trading, which are rarely found on other platforms.</li>
+                    <li>Intuitive interface and support for multiple languages, including Polish.</li>
+                </ul>
+                <strong>Disadvantages:</strong>
+                <ul>
+                    <li>Lower trading volume compared to Binance.</li>
+                    <li>Limited PLN deposit options.</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <a href="YOUR_BITGET_AFFILIATE_LINK" class="button" target="_blank">Sign up on Bitget</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="exchange-info">
+                    <img src="https://example.com/mexc-logo.png" alt="MEXC Logo" class="avatar">
+                    <h2>MEXC</h2>
+                </div>
+            </div>
+            <div class="card-body">
+                <strong>Advantages:</strong>
+                <ul>
+                    <li>No identity verification required.</li>
+                    <li>Low trading fees and support for less popular tokens.</li>
+                    <li>Good platform for advanced traders looking for opportunities in altcoin markets.</li>
+                </ul>
+                <strong>Disadvantages:</strong>
+                <ul>
+                    <li>No direct PLN deposit options.</li>
+                    <li>Less advanced analytical tools compared to Binance.</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <a href="YOUR_MEXC_AFFILIATE_LINK" class="button" target="_blank">Sign up on MEXC</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
